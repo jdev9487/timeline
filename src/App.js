@@ -1,8 +1,7 @@
 import { motion, useTransform, useScroll } from "framer-motion"
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
+import axios from "axios";
 import "./styles.css";
-
-var json = require('./data.json')
 
 function Images({ text, url }) {
   const ref = useRef(null);
@@ -19,9 +18,18 @@ function Images({ text, url }) {
 }
 
 export default function App() {
+
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    axios.get('/data.json').then((res) => {
+      setData(res.data)
+    })
+  })
+
   return (
     <div className="App">
-      {json.map((img) => (
+      {data.map((img) => (
         <Images key={img.id} text={img.text} url={img.url} />
       ))}
     </div>
