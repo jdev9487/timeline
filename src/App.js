@@ -1,16 +1,35 @@
-import { motion, useTransform, useScroll } from "framer-motion"
-import { useEffect, useRef, useState } from "react";
+import { motion } from "framer-motion"
+import { useEffect, useState } from "react";
 import "./styles.css";
 import axios from "axios";
 
 function Images({ title, texts, url }) {
-  const ref = useRef(null);
-  const { scrollYProgress } = useScroll({ target: ref });
-  const y = useTransform(scrollYProgress, [0, 1], [-1000, 350]);
-  const y2 = useTransform(scrollYProgress, [0, 1], [-800, 350]);
+  // const ref = useRef(null);
+  // const { scrollYProgress } = useScroll({ target: ref });
+  // const y = useTransform(scrollYProgress, [0, 1], [-1000, 350]);
+  // const y2 = useTransform(scrollYProgress, [0, 1], [-800, 350]);
   return (
     <section>
-      <div ref={ref}>
+      <motion.div>
+        <h2>
+          {title}
+        </h2>
+        <div style={{display: "flex"}}>
+          <div style={{margin: "16px"}}>
+            <img src={url} alt={title} />
+          </div>
+          <div style={{margin: "16px"}}>
+            {texts.map((t) => {
+              return (
+                <p>
+                  {t}
+                </p>
+              )
+            })}
+          </div>
+        </div>
+      </motion.div>
+      {/* <div ref={ref}>
         <img src={url} alt={title} />
       </div>
       <motion.h2 style={{ y }}>
@@ -22,7 +41,7 @@ function Images({ title, texts, url }) {
             {t}
           </motion.p>
         )
-      })}
+      })} */}
     </section>
   );
 }
