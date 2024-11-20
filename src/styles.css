@@ -20,14 +20,22 @@ html {
   h2 {
     margin: 0;
     color: white;
-    left: calc(50% + 130px);
-    font-size: 56px;
+    left: calc(50%);
+    font-size: 48px;
     font-weight: 700;
     font-family: sofia-pro, sans-serif;
     font-style: normal;
     letter-spacing: -2px;
     line-height: 1.2;
     position: absolute;
+  }
+
+  p {
+    color: white;
+    font-size: 24px;
+    font-weight: 300;
+    font-family: sofia-pro, sans-serif;
+    font-style: normal;
   }
   
   img {
@@ -46,12 +54,11 @@ html {
   }
   
   section > div {
-    width: 300px;
-    height: 550px;
+    width: 350px;
+    height: 500px;
     position: relative;
     max-height: 90vh;
     margin: 20px;
-    overflow: hidden;
     border-radius: 5px;
   }
   

@@ -1,0 +1,10 @@
+version: '3.8'
+services:
+  timeline-app:
+    # image: jdev9487/blog-proxy-server:latest
+    build: 
+      context: .
+    ports:
+      - '3000:3000'
+    volumes:
+      - ./data.json:/react-app/data.json:ro
