@@ -25,3 +25,4 @@ yarn-error.log*
 .vscode
 
 public/data.json
+public/images
