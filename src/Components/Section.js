@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 
-export default function Section({ title, facts, url }) {
+export default function Section({ title, facts, image }) {
 
   return (
     <section>
@@ -10,7 +10,8 @@ export default function Section({ title, facts, url }) {
         </h2>
         <div style={{display: "flex"}}>
           <div style={{margin: "16px"}}>
-            <img src={`/images/${url}`} alt={title} />
+            <img src={`/images/${image.url}`} alt={title} />
+            <p>{image.source}</p>
           </div>
           <div style={{margin: "16px"}}>
             {facts.map((f, index) => {

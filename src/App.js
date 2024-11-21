@@ -14,7 +14,7 @@ export default function App() {
   return (
     <div className="App">
       {data.map((section, index) => (
-        <Section key={index} title={section.title} facts={section.facts} url={section.url} />
+        <Section key={index} title={section.title} facts={section.facts} image={section.image} />
       ))}
     </div>
   );
