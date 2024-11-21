@@ -20,8 +20,9 @@ html {
   h2 {
     margin: 0;
     color: white;
-    bottom: calc(100% - 80px);
-    left: calc(50%);
+    bottom: calc(100% - 120px);
+    /* left: calc(50%); */
+    width: 100%;
     font-size: 48px;
     font-weight: 700;
     font-family: sofia-pro, sans-serif;

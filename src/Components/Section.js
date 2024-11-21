@@ -11,17 +11,21 @@ export default function Section({ title, facts, image }) {
         <div style={{display: "flex"}}>
           <div style={{margin: "16px"}}>
             <img src={`/images/${image.url}`} alt={title} />
-            <p>{image.source}</p>
+            <p style={{fontSize: "12px"}}>{image.source}</p>
           </div>
           <div style={{margin: "16px"}}>
-            {facts.map((f, index) => {
+            {facts.map((f, f_i) => {
               return (
-                <p key={index}>
-                {f.text}
+                <p key={f_i} style={{textAlign: "left"}}>
+                {f.text + " "}
                 <sup>
-                    <a href={f.reference} target="_blank" rel="noreferrer">
-                        {index + 1}
-                    </a>
+                  {f.references.map((r, r_i) => {
+                    return (
+                        <a href={r} target="_blank" rel="noreferrer" style={{color: "inherit", textDecoration: "none"}}>
+                          [{r_i + 1}]
+                        </a>
+                    )
+                  }).reduce((prev, curr) => [prev, ', ', curr])}
                 </sup>
                 </p>
               )
