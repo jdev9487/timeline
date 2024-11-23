@@ -3,13 +3,14 @@ html {
   }
   
   body {
-    background: rgb(253, 29, 29);
+    background: rgb(0, 100, 29);
     background: radial-gradient(
       circle,
-      rgba(253, 29, 29, 1) 50%,
+      rgba(0, 100, 29, 1) 50%,
       rgba(252, 176, 69, 1) 100%
     );
     color: white;
+    padding: 0 64px;
   }
   
   .App {
@@ -19,7 +20,7 @@ html {
   
   h2 {
     margin: 0;
-    color: white;
+    color: #ddd;
     bottom: calc(100% - 120px);
     /* left: calc(50%); */
     width: 100%;
@@ -33,9 +34,9 @@ html {
   }
 
   p {
-    color: white;
-    font-size: 24px;
-    font-weight: 300;
+    color: #ccc;
+    font-size: 36px;
+    font-weight: 100;
     font-family: sofia-pro, sans-serif;
     font-style: normal;
   }
